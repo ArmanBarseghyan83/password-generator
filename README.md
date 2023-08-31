@@ -1,4 +1,4 @@
-# Password Gnerator
+# Password Generator
 
 ## Description
 
@@ -7,6 +7,8 @@ This project taught me how to use JavaScript basics like loops, functions, data 
 ## Usage
 
 When a user clicks the button to generate a password they will be presented with a series of prompts for a password criteria. After answering all prompts the password will be presented.
+
+Go to [Password Generator](https://armanbarseghyan83.github.io/password-generator/)
 
 ![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
 
