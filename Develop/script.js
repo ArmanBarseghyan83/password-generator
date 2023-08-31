@@ -15,17 +15,27 @@ var generatePassword = function () {
       length = prompt("Must be less than 128");
     }
   }
-  var isUpper = confirm("Include uppercase?");
-  var isNumeric = confirm("Include numeric (0123456789)?");
-  var isSpecial = confirm(
-    "Include special (!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~)?"
-  );
+
+  while (!isLower && !isUpper && !isNumeric && !isSpecial) {
+    var isLower = confirm("Include lowercase?");
+    var isUpper = confirm("Include uppercase?");
+    var isNumeric = confirm("Include numeric (0123456789)?");
+    var isSpecial = confirm(
+      "Include special (!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~)?"
+    );
+    if (!isLower && !isUpper && !isNumeric && !isSpecial) {
+      alert("Password must include at least one type of character.");
+    }
+  }
 
   var characters = "";
+
   if (isUpper) {
-    characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-  } else {
-    characters = "abcdefghijklmnopqrstuvwxyz";
+    characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  }
+
+  if (isLower) {
+    characters += "abcdefghijklmnopqrstuvwxyz";
   }
 
   if (isNumeric) {
